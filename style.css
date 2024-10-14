@@ -1,0 +1,140 @@
+/* Set the background color to black for the entire page */
+body {
+    background-color: black; 
+}
+
+/* Center align the main heading text */
+h1 {
+    text-align: center; 
+}
+
+/* Flexbox layout for child elements, centers items, and allows wrapping */
+.container {
+    display: flex; 
+    justify-content: center; 
+    text-align: center; 
+    gap: 10px; 
+    max-width: 100%; 
+    margin: 0 auto; 
+    flex-wrap: wrap; 
+    position: relative; 
+}
+
+/* Styles for the individual boxes, including size and border */
+.box {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid black; 
+    height: 100px; 
+    width: 100px; 
+    font-size: 50px; 
+    cursor: pointer; 
+    border-radius: 15px; 
+    transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+/* Hover effects for the boxes */
+.box:hover {
+    background-color: #53331F; 
+    color: white; 
+    opacity: 0.9; 
+    box-shadow: #D4B8B1 0px 0px 0px 3px; 
+}
+
+/* Styles for information boxes with padding and margin */
+.info_box {
+    flex-grow: 1; 
+    justify-content: center; 
+    align-items: center; 
+    border: 1px solid black; 
+    margin-top: 20px; 
+    padding: 10px; 
+    border-radius: 15px; 
+}
+
+/* Hover effects for information boxes */
+.info_box:hover {
+    background-color: #866C69; 
+    box-shadow: #D4B8B1 0px 0px 0px 3px; 
+    color: white; 
+    opacity: 0.9; 
+}
+
+/* Center align message text */
+.msg {
+    text-align: center; 
+}
+
+/* Main styling for the game container with gradient background and animation */
+.big {
+    border: 1px solid black; 
+    max-width: 700px; 
+    height: 400px; 
+    margin: auto; 
+    align-items: center; 
+    justify-content: center; 
+    position: relative; 
+    border-radius: 20px; 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    background: linear-gradient(45deg, #D4B8B1, #866C69, #CD8C8C, #53331F); 
+    background-size: 300% 300%; 
+    animation: color 12s ease-in-out infinite; 
+    padding: 20px; 
+    margin-top: 8rem; 
+}
+
+/* Keyframes for background color animation */
+@keyframes color {
+    0% {
+        background-position: 0 50%; 
+    }
+    50% {
+        background-position: 100% 50%; 
+    }
+    100% {
+        background-position: 0 50%; 
+    }
+}
+
+/* Hover effect for the main game container */
+.big:hover {
+    box-shadow: #D4B8B1 0px 22px 70px 4px; 
+}
+
+/* Media queries for responsiveness on tablets */
+@media (max-width: 768px) {
+    .box {
+        height: 80px; 
+        width: 80px; 
+        font-size: 40px; 
+    }
+
+    .info_box {
+        padding: 5px; 
+        font-size: 14px; 
+    }
+
+    .container {
+        gap: 5px; 
+    }
+}
+
+/* Media queries for responsiveness on mobile devices */
+@media (max-width: 480px) {
+    .box {
+        height: 60px; 
+        width: 60px; 
+        font-size: 30px; 
+    }
+
+    .info_box {
+        padding: 5px; 
+        font-size: 12px; 
+    }
+
+    .container {
+        gap: 3px; 
+    }
+}
